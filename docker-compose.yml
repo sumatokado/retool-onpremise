@@ -74,6 +74,8 @@ services:
   postgres:
     image: 'postgres:9.6.5'
     env_file: docker.env
+    ports:
+      - "5435:5432"
     networks:
       - backend-network
     volumes:
